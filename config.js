@@ -29,5 +29,4 @@ const facebookProvider = new FacebookAuthProvider();
 // Log to verify initialization
 console.log("Firebase initialized:", app);
 
-// Export services for use in other modules
-export { app, analytics, auth, db, googleProvider, facebookProvider };
+
