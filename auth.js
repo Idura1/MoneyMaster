@@ -93,6 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Send Password Reset Email
   resetPasswordBtn?.addEventListener("click", async (e) => {
     e.preventDefault();
+    
     let email = emailInput ? emailInput.value.trim() : "";
 
     if (!email) {
@@ -156,23 +157,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Monitor Auth State Changes
   onAuthStateChanged(auth, user => {
-    // Determine if the current page is the login page
-    const isLoginPage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/" || window.location.pathname === "";
-    
     if (user) {
-      // User is signed in
       if (userEmail) {
         userEmail.textContent = `Email: ${user.email}`;
       }
-      // If on the login page and authenticated, redirect to dashboard
-      if (isLoginPage) {
-        window.location.href = "dashboard.html";
-      }
     } else {
-      // User is not signed in; if not on the login page, redirect to login page.
-      if (!isLoginPage) {
+      if (window.location.pathname !== "/index.html") {
         window.location.href = "index.html";
       }
     }
   });
 });
+
