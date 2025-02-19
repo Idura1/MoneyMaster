@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Money Master Dashboard</title>
-  <link href="output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
   <style>
@@ -55,7 +56,7 @@
     .navbar ul { display: flex; flex-wrap: wrap; }
     .navbar ul li { margin: 0 5px; }
     .navbar ul li a { 
-      color: var (--white); 
+      color: var(--white); 
       font-size: 16px; 
       font-weight: 600; 
       padding: 8px 15px;
@@ -118,23 +119,23 @@
 <body class="min-h-screen font-['Inter']">
     
     <nav class="navbar">
-        <div class="container mx-auto p-4">
-            <div class="flex justify-between items-center">
-                <div class="logo text-2xl font-bold">Money Master</div>
-                <input type="checkbox" name="" id="click" class="hidden">
-                <label for="click" class="menu-btn cursor-pointer md:hidden">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="logo">Money Master</div>
+                <input type="checkbox" name="" id="click">
+                <label for="click" class="menu-btn">
                     <i class="material-icons">menu</i>
                 </label>
-                <ul class="hidden md:flex space-x-6">
-                    <li><a href="#" class="text-white">Home</a></li>
-                    <li><a href="#" class="text-white">Web Tools</a></li>
-                    <li><a href="#" class="text-white">About</a></li>
-                    <li><a href="#" class="text-white">Contact</a></li>
-                    <li><a href="#" class="text-white">Author</a></li>
+                <ul>
+                    <li><a href="dashboard.html">Home</a></li>
+                    <li><a href="#">Web Tools</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Author</a></li>
                 </ul>
-                <div class="profile-menu relative">
-                    <i class="material-icons profile-icon cursor-pointer">account_circle</i>
-                    <div class="profile-menu-content absolute right-0 bg-black text-white rounded-md shadow-lg hidden">
+                <div class="profile-menu">
+                    <i class="material-icons profile-icon">account_circle</i>
+                    <div class="profile-menu-content">
                         <a href="#">Account</a>
                         <a id="userEmail" href="#">Email: user@example.com</a>
                         <a id="resetPassword" href="#">Reset Password</a>
@@ -144,7 +145,7 @@
             </div>
         </div>
     </nav>
-
+  
     <header>
         <h1 class="heading">Welcome to Money Master Dashboard</h1>
         <p class="content">Explore our web tools, learn more about us, or get in touch.</p>
@@ -153,6 +154,5 @@
   <!-- Include Firebase, Auth, and Chat Scripts -->
   <script type="module" src="config.js"></script>
   <script type="module" src="auth.js"></script>
-  <script src="https://unpkg.com/@google/first-input-delay@0.2.4/dist/first-input-delay.min.js"></script>
 </body> 
 </html>
