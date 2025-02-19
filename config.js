@@ -2,7 +2,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebas
 import { getAuth, GoogleAuthProvider, FacebookAuthProvider } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
-import { getPerformance } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-performance.js";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -15,14 +14,13 @@ const firebaseConfig = {
   measurementId: "G-GEM4QGFW7B"
 };
 
-// Initialize Firebase
+// Initialize Firebase App
 const app = initializeApp(firebaseConfig);
 
-// Initialize Analytics, Auth, Firestore, and Performance Monitoring
+// Initialize Analytics, Auth, and Firestore
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
-const perf = getPerformance(app);
 
 // Initialize Google and Facebook Auth Providers
 const googleProvider = new GoogleAuthProvider();
@@ -32,4 +30,4 @@ const facebookProvider = new FacebookAuthProvider();
 console.log("Firebase initialized:", app);
 
 // Export services for use in other modules
-export { app, analytics, auth, db, googleProvider, facebookProvider, perf };
+export { app, analytics, auth, db, googleProvider, facebookProvider };
