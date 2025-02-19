@@ -9,6 +9,7 @@
   <link href="styles.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
+
   <style>
     body, html {
       height: 100%;
@@ -16,7 +17,7 @@
       overflow-y: auto;
     }
     body {
-      background-image: url('https://coolbackgrounds.io/images/backgrounds/black/black-triangle-b9cb7263.jpg');
+      background-image: url('Mountains Are Yearning GoDaddy Store Image (6).png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -41,87 +42,163 @@
       white-space: nowrap;
       border: 0;
     }
+    /* Dark mode styles */
+    .dark {
+      background-color: #1a1a1a;
+      color: white;
+    }
   </style>
 </head>
 <body class="min-h-screen font-['Inter']">
     
-    <nav class="navbar">
-        <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <!-- Fixed Logo: Removed extra closing tag -->
-                <div class="logo">Money Master</div>
-                <input type="checkbox" id="click">
-                <label for="click" class="menu-btn">
-                    <i class="material-icons">menu</i>
-                </label>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <div class="logo">Money Master</div>
+    
+      
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <section>
-        <div class="container">
-            <div class="row full-screen align-items-center justify-content-center">
-                <div class="left animate__animated animate__fadeInLeft">
-                    <h2>Welcome to Money Master<br> a <span>Explore Free Web Tools and Resources</span></h2>
-                    <p>Universal Eye Tools Super Website</p>
-                    <a href="#" class="btn">Let's Go</a>
+  <section>
+    <div class="container">
+      <div class="row full-screen align-items-center justify-content-center">
+        <div class="left animate__animated animate__fadeInLeft">
+          <h2>Welcome to Money Master<br> a <span>Explore Free Web Tools and Resources</span></h2>
+          <p>Universal Eye Tools Super Website</p>
+          <a href="#" class="btn">Let's Go</a>
 
-                    <div class="social-media">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="form animate__animated animate__fadeInRight p-8 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 shadow-lg w-full max-w-md ml-auto">
-                        <!-- Auth Form -->
-                        <form id="authForm" class="space-y-6">
-                          <!-- Email Input -->
-                          <div>
-                            <label for="email" class="sr-only">Email Address</label>
-                            <input type="email" id="email" placeholder="Email Address" 
-                              class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none text-gray-800 bg-white/70 transition-all duration-200" 
-                              required>
-                          </div>
-                          <!-- Password Input -->
-                          <div class="relative">
-                            <label for="password" class="sr-only">Password</label>
-                            <input type="password" id="password" placeholder="Password" 
-                              class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none text-gray-800 bg-white/70 transition-all duration-200" 
-                              required>
-                            <span id="togglePassword" class="absolute right-4 top-3 cursor-pointer">
-                              <i class="material-icons">visibility_off</i>
-                            </span>
-                          </div>
-                          <!-- Error Message Container -->
-                          <div id="errorMessage" class="text-red-500 text-center"></div>
-                          <!-- Buttons -->
-                          <div class="space-y-4 pt-4">
-                              <button type="button" id="signInBtn" 
-                                class="w-full bg-gradient-to-r from-teal-500 to-blue-500 text-white py-3 rounded-xl shadow-md hover:from-teal-600 hover:to-blue-600 transition transform hover:scale-105 animate__animated animate__pulse">
-                                Sign In
-                              </button>
-                              <button type="button" id="signUpBtn" 
-                                class="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 rounded-xl shadow-md hover:from-pink-600 hover:to-purple-600 transition transform hover:scale-105 animate__animated animate__pulse">
-                                Sign Up
-                              </button>
-                          </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+          <div class="social-media">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
         </div>
-    </section>
- 
-  <!-- Include Firebase, Auth, and Chat Scripts -->
+      
+        <div class="right">
+          <div class="form animate__animated animate__fadeInRight p-8 bg-black/10 backdrop-blur-md rounded-xl border border-white/20 shadow-lg w-full max-w-md ml-auto">
+            <form id="authForm" class="space-y-6">
+              <div>
+                <h6 class="text-3xl font-bold text-center text-teal-400 mb-6">
+                  Register and Login
+                </h6>
+                <label for="email" class="sr-only">Email Address</label>
+                <input type="email" id="email" placeholder="Email Address" 
+                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none text-gray-800 bg-white/70 transition-all duration-200" 
+                  required>
+              </div>
+              <div class="relative">
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" id="password" placeholder="Password" 
+                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none text-gray-800 bg-white/70 transition-all duration-200" 
+                  required>
+                <span id="togglePassword" class="absolute right-4 top-3 cursor-pointer">
+                  <i class="material-icons">visibility_off</i>
+                </span>
+              </div>
+              <div id="errorMessage" class="text-red-500 text-center"></div>
+              <div class="space-y-4 pt-4">
+                  <button type="button" id="signInBtn" 
+                    class="w-full bg-gradient-to-r from-teal-500 to-blue-500 text-white py-3 rounded-xl shadow-md hover:from-teal-600 hover:to-blue-600 transition transform hover:scale-105 animate__animated animate__pulse">
+                    Sign In
+                  </button>
+                  <button type="button" id="signUpBtn" 
+                    class="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 rounded-xl shadow-md hover:from-pink-600 hover:to-purple-600 transition transform hover:scale-105 animate__animated animate__pulse">
+                    Sign Up
+                  </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="py-16 bg-black text-white text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-6">Gallery</h2>
+      <p class="text-lg max-w-3xl mx-auto mb-8">
+        Explore the Money Master gallery showcasing our platform, tools, and user experiences in the world of coding and finance.
+      </p>
+  
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Gallery Item 1 -->
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="https://wallstreetmediaco.net/wp-content/uploads/2018/12/may-2666-top-pic-v.jpg" 
+            alt="Gallery Image 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="text-white text-lg font-semibold">Finance & Tech</p>
+          </div>
+        </div>
+  
+        <!-- Gallery Item 2 -->
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="https://img-c.udemycdn.com/course/750x422/4487378_0229_2.jpg" 
+            alt="Gallery Image 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="text-white text-lg font-semibold">Crypto Trading</p>
+          </div>
+        </div>
+  
+        <!-- Gallery Item 3 -->
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="https://myaolcc.com/wp-content/uploads/2022/12/Considering-a-Coding-Bootcamp-Trends-to-Expect-in-2023-1.jpg" 
+            alt="Gallery Image 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="text-white text-lg font-semibold">Coding & Development</p>
+          </div>
+        </div>
+  
+        <!-- Gallery Item 4 -->
+        <div class="relative group overflow-hidden rounded-lg shadow-lg">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/007/997/267/small_2x/businessmen-point-to-successful-business-growth-plans-ladder-of-success-action-planning-and-long-term-business-goals-photo.jpg" 
+            alt="Gallery Image 4" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p class="text-white text-lg font-semibold">Business & Growth</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section id="About" class="py-16 bg-black text-white text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-6">About Money Master</h2>
+      <p class="text-lg max-w-3xl mx-auto">
+        Money Master is a cutting-edge platform designed for both coding enthusiasts and those interested in e-money and crypto trading. 
+        <br><br>
+        Our coding tools allow you to build, manage, and optimize financial applications, while our crypto trading resources offer real-time insights and trading capabilities in the digital asset space. Whether you're a developer looking for powerful coding tools or a crypto trader seeking the latest market analysis, Money Master provides the tools and resources to enhance your financial journey.
+        <br><br>
+        I am responsible for the creation and management of this platform. As a believer in the power of innovation and with extensive experience in coding, digital finance, and crypto trading, I have a strong commitment to delivering high-quality services. With a deep understanding of both the tech and financial sectors, I am dedicated to providing valuable resources to help others succeed in these industries. I believe in the power of knowledge and strive to share my expertise to empower users.
+      </p>
+      <p class="text-md mt-6 font-semibold">- Created by Idura Buddika, Money Master </p>
+    </div>
+  </section>
+
+  <section id="animated-text-section" class="py-16 bg-black text-white text-center">
+    <div class="container mx-auto px-6">
+     
+      <div class="relative">
+
+  <footer class="footer">
+    <p>&copy; 2025 Money Master. All rights reserved.</p>
+    <div class="social-icons">
+       <a href="#"><i class="fab fa-facebook"></i></a>
+       <a href="#"><i class="fab fa-twitter"></i></a>
+       <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
   <script type="module" src="config.js"></script>
   <script type="module" src="auth.js"></script>
   <script type="module" src="background.js"></script>
@@ -135,6 +212,12 @@
       passwordInput.setAttribute('type', type);
       this.querySelector('i').textContent = type === 'password' ? 'visibility_off' : 'visibility';
     });
+    
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark');
+    });
   </script>
-</body> 
+</body>
 </html>
