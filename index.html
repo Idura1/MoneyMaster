@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money Master</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      overflow-y: auto;
+    }
+    body {
+      background-image: url('https://coolbackgrounds.io/images/backgrounds/black/black-triangle-b9cb7263.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: var(--white);
+      font-family: 'Lato', sans-serif;
+      font-weight: bold;
+      animation: fadeIn 1.5s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    /* Visually hidden but accessible label */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body class="min-h-screen font-['Inter']">
+    
+    <nav class="navbar">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <!-- Fixed Logo: Removed extra closing tag -->
+                <div class="logo">Money Master</div>
+                <input type="checkbox" id="click">
+                <label for="click" class="menu-btn">
+                    <i class="material-icons">menu</i>
+                </label>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div class="row full-screen align-items-center justify-content-center">
+                <div class="left animate__animated animate__fadeInLeft">
+                    <h2>Welcome to Money Master<br> a <span>Explore Free Web Tools and Resources</span></h2>
+                    <p>Universal Eye Tools Super Website</p>
+                    <a href="#" class="btn">Let's Go</a>
+
+                    <div class="social-media">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="form animate__animated animate__fadeInRight p-8 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 shadow-lg w-full max-w-md ml-auto">
+                        <!-- Auth Form -->
+                        <form id="authForm" class="space-y-6">
+                          <!-- Email Input -->
+                          <div>
+                            <label for="email" class="sr-only">Email Address</label>
+                            <input type="email" id="email" placeholder="Email Address" 
+                              class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none text-gray-800 bg-white/70 transition-all duration-200" 
+                              required>
+                          </div>
+                          <!-- Password Input -->
+                          <div class="relative">
+                            <label for="password" class="sr-only">Password</label>
+                            <input type="password" id="password" placeholder="Password" 
+                              class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none text-gray-800 bg-white/70 transition-all duration-200" 
+                              required>
+                            <span id="togglePassword" class="absolute right-4 top-3 cursor-pointer">
+                              <i class="material-icons">visibility_off</i>
+                            </span>
+                          </div>
+                          <!-- Error Message Container -->
+                          <div id="errorMessage" class="text-red-500 text-center"></div>
+                          <!-- Buttons -->
+                          <div class="space-y-4 pt-4">
+                              <button type="button" id="signInBtn" 
+                                class="w-full bg-gradient-to-r from-teal-500 to-blue-500 text-white py-3 rounded-xl shadow-md hover:from-teal-600 hover:to-blue-600 transition transform hover:scale-105 animate__animated animate__pulse">
+                                Sign In
+                              </button>
+                              <button type="button" id="signUpBtn" 
+                                class="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 rounded-xl shadow-md hover:from-pink-600 hover:to-purple-600 transition transform hover:scale-105 animate__animated animate__pulse">
+                                Sign Up
+                              </button>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+  <!-- Include Firebase, Auth, and Chat Scripts -->
+  <script type="module" src="config.js"></script>
+  <script type="module" src="auth.js"></script>
+  <script type="module" src="background.js"></script>
+  <script>
+    // Toggle password visibility
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    togglePassword.addEventListener('click', function () {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      this.querySelector('i').textContent = type === 'password' ? 'visibility_off' : 'visibility';
+    });
+  </script>
+</body> 
+</html>

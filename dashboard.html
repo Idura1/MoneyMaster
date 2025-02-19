@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Money Master Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      overflow-y: auto;
+    }
+    body {
+      background-image: url('https://coolbackgrounds.io/images/backgrounds/black/black-triangle-b9cb7263.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: var(--white);
+      font-family: 'Lato', sans-serif;
+      font-weight: bold;
+      animation: fadeIn 1.5s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .navbar {
+      width: 100%;
+      background-color: var(--black);
+      position: fixed;
+      z-index: 999;
+      padding: 25px;
+      box-shadow: var(--shadow);
+    }
+    .navbar .logo { 
+      color: var(--white); 
+      font-size: 32px; 
+      font-weight: 600; 
+      text-transform: capitalize;
+    }
+    .navbar .logo span { color: var(--mainColor); }
+    .navbar .container { 
+      padding: 0 25px; 
+    }
+    .navbar .menu-btn i { 
+      color: var(--white); 
+      font-size: 28px; 
+      cursor: pointer; 
+      display: none; 
+    }
+    .navbar ul { display: flex; flex-wrap: wrap; }
+    .navbar ul li { margin: 0 5px; }
+    .navbar ul li a { 
+      color: var(--white); 
+      font-size: 16px; 
+      font-weight: 600; 
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: var(--transition);
+    }
+    .navbar ul li a.active, nav ul li a:hover { 
+      color: var(--mainColor); 
+      background: var(--white); 
+    }
+    .profile-menu {
+      position: relative;
+      display: inline-block;
+    }
+    .profile-icon {
+      font-size: 36px; /* Increase icon size */
+      cursor: pointer;
+    }
+    .profile-menu-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: var(--black);
+      min-width: 160px;
+      box-shadow: var(--shadow);
+      border-radius: 5px;
+      z-index: 1;
+    }
+    .profile-menu-content a {
+      color: var(--white);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      border-bottom: 1px solid var(--whiteSmoke);
+    }
+    .profile-menu-content a:last-child {
+      border-bottom: none;
+    }
+    .profile-menu-content a:hover {
+      background-color: var(--mainColor);
+    }
+    .profile-menu:hover .profile-menu-content {
+      display: block;
+    }
+    .heading {
+      text-align: center;
+      margin-top: 100px;
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .content {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 20px;
+      color: var(--whiteSmoke);
+    }
+  </style>
+</head>
+<body class="min-h-screen font-['Inter']">
+    
+    <nav class="navbar">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="logo">Money Master</div>
+                <input type="checkbox" name="" id="click">
+                <label for="click" class="menu-btn">
+                    <i class="material-icons">menu</i>
+                </label>
+                <ul>
+                    <li><a href="dashboard.html">Home</a></li>
+                    <li><a href="#">Web Tools</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Author</a></li>
+                </ul>
+                <div class="profile-menu">
+                    <i class="material-icons profile-icon">account_circle</i>
+                    <div class="profile-menu-content">
+                        <a href="#">Account</a>
+                        <a id="userEmail" href="#">Email: user@example.com</a>
+                        <a id="resetPassword" href="#">Reset Password</a>
+                        <a id="signOut" href="index.html">Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+  
+    <header>
+        <h1 class="heading">Welcome to Money Master Dashboard</h1>
+        <p class="content">Explore our web tools, learn more about us, or get in touch.</p>
+    </header>
+ 
+  <!-- Include Firebase, Auth, and Chat Scripts -->
+  <script type="module" src="config.js"></script>
+  <script type="module" src="auth.js"></script>
+</body> 
+</html>
