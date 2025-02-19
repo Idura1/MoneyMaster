@@ -28,5 +28,3 @@ const facebookProvider = new FacebookAuthProvider();
 
 // Log to verify initialization
 console.log("Firebase initialized:", app);
-
-
