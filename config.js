@@ -22,10 +22,3 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// Initialize Google and Facebook Auth Providers
-const googleProvider = new GoogleAuthProvider();
-const facebookProvider = new FacebookAuthProvider();
-
-// Log to verify initialization
-console.log("Firebase initialized:", app);
-
