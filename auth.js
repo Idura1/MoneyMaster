@@ -155,16 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Monitor Auth State Changes
-  onAuthStateChanged(auth, user => {
-    if (user) {
-      if (userEmail) {
-        userEmail.textContent = `Email: ${user.email}`;
-      }
-    } else {
-      if (window.location.pathname !== "/index.html") {
-        window.location.href = "index.html";
-      }
+
     }
   });
 });
