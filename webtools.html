@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Master Universal Eye Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animation for hover effects */
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-bounceIn {
+            animation: bounceIn 0.6s ease-out;
+        }
+
+        /* Adding transition effects to buttons */
+        .btn-hover:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            background-color: #0c3092;
+        }
+
+        /* Custom styles for neumorphic button */
+        .neumorphic-button {
+            background: #e0e0e0;
+            border-radius: 12px;
+            box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px rgba(255, 255, 255, 0.7);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .neumorphic-button:hover {
+            box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3), -8px -8px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .neumorphic-button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-500 via-teal-500 to-purple-500 font-sans">
+    <style>
+        /* Custom styles for the navbar */
+        .navbar-item:hover {
+            color: #1b232e;
+        }
+        .navbar-dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .navbar-dropdown .dropdown-content {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+<!-- Advanced Navbar -->
+<nav class="bg-blue-800 p-4 shadow-lg">
+    <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="text-white text-2xl font-bold">
+            <img src="1739468967432owpiav36.jpg" alt="Universal Eye Logo" class="w-10 h-10 inline-block mr-2">
+            Universal Eye
+        </div>
+
+        <!-- Navbar Links -->
+        <div class="hidden md:flex space-x-6 text-white font-medium">
+            <a href="Dashboard.html" class="navbar-item hover:text-yellow-400">Home</a>
+            <a href="#services" class="navbar-item hover:text-yellow-400">Services</a>
+            <a href="#contact" class="navbar-item hover:text-yellow-400">Contact</a>
+
+        
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center space-x-4">
+            <button class="text-white text-2xl focus:outline-none" id="mobile-menu-button">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu (Hidden by Default) -->
+<div class="md:hidden hidden" id="mobile-menu">
+    <div class="flex flex-col items-center bg-blue-800 p-4 space-y-4">
+        <a href="Dashboard.html" class="">Home</a>
+        <a href="#" class="text-white">Services</a>
+        <a href="#" class="text-white">Contact</a>
+    </div>
+</div>
+
+<script>
+    // Mobile menu toggle
+    document.getElementById("mobile-menu-button").addEventListener("click", function () {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+</script>
+    <!-- Dashboard Container -->
+    <div class="min-h-screen flex flex-col items-center">
+        <style>
+            .social-icon {
+                width: 40px;
+                height: 40px;
+                margin: 0 10px;
+                transition: transform 0.3s ease;
+            }
+        
+            .social-icon:hover {
+                transform: scale(1.1); /* Adds a zoom effect when hovering */
+            }
+        
+            .social-link {
+                display: inline-block;
+            }
+        </style>
+        
+        <body class="bg-gray-100">
+        
+        <!-- Welcome Section with Logo and Social Icons -->
+        <section class="w-full bg-blue-600 text-white text-center py-12 rounded-b-xl shadow-lg">
+            <h1 class="text-5xl font-semibold">Welcome to Universal Eye Dashboard</h1>
+            <p class="text-xl mt-3">Empowering your projects with powerful web tools and resources.</p>
+        
+            <!-- Social Media Icons Section -->
+            <div class="mt-8">
+                <div class="mt-4">
+                    <a href="https://www.youtube.com/@MoneyMaster629" class="social-link">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" class="social-icon">
+                    </a>
+                    <a href="https://www.tiktok.com/@money_master_sinhala?_t=ZS-8ttK7QCGAH2&_r=1" class="social-link">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/7c/49/e1/7c49e1af-ce92-d1c4-9a93-0a316e47ba94/AppIcon_TikTok-0-0-1x_U007epad-0-1-0-0-85-220.png/217x0w.webp" alt="TikTok" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </section>
+        </body>
+        
+        
+        <!-- Free Web Tools Section -->
+        <section class="w-full py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-semibold text-center text-gray-800 mb-10">Free Web Tools</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                   <!-- Tool 1 -->
+<div class="p-6 bg-gray-100 rounded-lg shadow-lg hover:scale-105 hover:bg-blue-50 transition duration-300 ease-in-out">
+    <h3 class="text-2xl font-semibold mb-4">Tool 1: Background Removal</h3>
+    <p>Analyze your photo Background Removal.</p>
+    <button onclick="window.location.href='BackgroundRemoval.html';" class="btn-hover mt-6 px-8 py-3 bg-blue-600 text-white rounded-full">Use Now</button>
+</div>
+
+                    <!-- Tool 2 -->
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-lg hover:scale-105 hover:bg-blue-50 transition duration-300 ease-in-out">
+                        <h3 class="text-2xl font-semibold mb-4">Tool 2: genarate images</h3>
+                        <p>Compress images to reduce size without losing quality.</p>
+                        <button onclick="window.location.href='genarateimages.html';" class="btn-hover mt-6 px-8 py-3 bg-blue-600 text-white rounded-full">Use Now</button>
+</div>
+                    <!-- Tool 3 -->
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-lg hover:scale-105 hover:bg-blue-50 transition duration-300 ease-in-out">
+                        <h3 class="text-2xl font-semibold mb-4">Tool 3: Watch World Videos</h3>
+                        <p> easy-to-use tool.</p>
+                        <button onclick="window.location.href='WatchWorldVideos.html';" class="btn-hover mt-6 px-8 py-3 bg-blue-600 text-white rounded-full">Use Now</button>
+                    </div>
+                       <!-- Tool 3 -->
+                       <div class="p-6 bg-gray-100 rounded-lg shadow-lg hover:scale-105 hover:bg-blue-50 transition duration-300 ease-in-out">
+                        <h3 class="text-2xl font-semibold mb-4">Tool 4: QR Code Generator</h3>
+                        <p> easy-to-use tool.</p>
+                        <button onclick="window.location.href='QRCodeGenerator.html';" class="btn-hover mt-6 px-8 py-3 bg-blue-600 text-white rounded-full">Use Now</button>
+                    </div>
+            
+                </div>
+                <!-- Free Tools Button -->
+                <div class="text-center mt-8">
+                    <a href="#" class="btn-hover inline-block px-8 py-4 bg-blue-600 text-white rounded-full text-xl">Explore All Free Tools</a>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .btn-hover:hover { background-color: #38a169; }
+            .logo { width: 70px; height: auto; }
+            .navbar { background-color: #000000; }
+            .navbar a { color: rgb(38, 255, 19); }
+            .navbar a:hover { background-color: #4a5568; }
+            
+            .loader {
+                border: 8px solid #f3f3f3;
+                border-top: 8px solid #000000;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                animation: spin 2s linear infinite;
+                margin: 0 auto;
+            }
+        
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        
+            .neumorphic-button {
+                background: #e0e5ec;
+                border-radius: 10px;
+                padding: 15px 30px;
+                color: #333;
+                box-shadow: 5px 5px 15px #aaa, -5px -5px 15px #fff;
+                transition: all 0.3s ease;
+            }
+            
+            .neumorphic-button:hover {
+                background: #d1d9e6;
+                box-shadow: 5px 5px 15px #888, -5px -5px 15px #fff;
+            }
+        </style>
+        
+        <body class="bg-gray-100">
+        
+        <!-- New Email Generator Button -->
+        <section class="w-full py-16 bg-gradient-to-r from-teal-500 to-blue-500">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-semibold text-white mb-6">Generator Tools</h2>
+                <a href="#" id="redirectButton" class="neumorphic-button">
+                    <span>Go to All Generator</span>
+                </a>
+                <div id="loadingContainer" style="display:none;">
+                    <div class="loader"></div>
+                    <p class="text-white mt-4">Loading...</p>
+                </div>
+            </div>
+        </section>
+                
+            </div>
+        </section>
+        <script>
+            document.getElementById("redirectButton").addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent immediate navigation
+        
+                // Show the loading spinner
+                document.getElementById("loadingContainer").style.display = "block";
+        
+                // Wait for 4 seconds, then redirect
+                setTimeout(function() {
+                    window.location.href = "Generator.html"; // Redirect to the generator page
+                }, 4000);
+            });
+        </script>
+        <!-- Pro Web Tools Section -->
+        <section class="w-full py-16 bg-gradient-to-r from-purple-500 to-blue-500">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-semibold text-center text-white mb-10">Pro Web Tools</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Tool 4 -->
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-lg hover:scale-105 hover:bg-blue-50 transition duration-300 ease-in-out">
+                        <h3 class="text-2xl font-semibold mb-4">Tool 4: Advanced Analytics</h3>
+                        <p>Unlock deeper insights into your website's performance.</p>
+                        <button class="btn-hover mt-6 px-8 py-3 bg-blue-600 text-white rounded-full">Use Now</button>
+                    </div>
+                    <!-- Tool 5 -->
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-lg hover:scale-105 hover:bg-blue-50 transition duration-300 ease-in-out">
+                        <h3 class="text-2xl font-semibold mb-4">Tool 5: SEO Optimizer</h3>
+                        <p>Optimize your website's SEO with advanced features.</p>
+                        <button class="btn-hover mt-6 px-8 py-3 bg-blue-600 text-white rounded-full">Use Now</button>
+                    </div>
+                    <!-- Tool 6 -->
+                    <div class="p-6 bg-gray-100 rounded-lg shadow-lg hover:scale-105 hover:bg-blue-50 transition duration-300 ease-in-out">
+                        <h3 class="text-2xl font-semibold mb-4">Tool 6: Pro Design Tool</h3>
+                        <p>Design beautiful websites with ease using professional tools.</p>
+                        <button class="btn-hover mt-6 px-8 py-3 bg-blue-600 text-white rounded-full">Use Now</button>
+                    </div>
+              
+            </div>
+        </section>
+        <style>
+            body { font-family: Arial, sans-serif; text-align: center; }
+            #chatbox { width: 100%; max-width: 400px; margin: auto; padding: 10px; border: 1px solid #ddd; }
+            #messages { height: 300px; overflow-y: auto; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+            input { width: 80%; padding: 10px; margin-top: 10px; }
+            button { padding: 10px; background: blue; color: white; border: none; }
+        </style>
+    </head>
+    <body>
+    
+        <h2>Chat with AI 🤖</h2>
+        <div id="chatbox">
+            <div id="messages"></div>
+            <input type="text" id="userInput" placeholder="Type a message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    
+        <script>
+            async function sendMessage() {
+                let userInput = document.getElementById("userInput").value;
+                let messages = document.getElementById("messages");
+                messages.innerHTML += "<p><b>You:</b> " + userInput + "</p>";
+    
+                let response = await fetch("https://api.openai.com/v1/chat/completions", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": "Bearer YOUR_OPENAI_API_KEY"
+                    },
+                    body: JSON.stringify({
+                        model: "gpt-3.5-turbo",
+                        messages: [{ role: "user", content: userInput }]
+                    })
+                });
+    
+                let data = await response.json();
+                let botMessage = data.choices[0].message.content;
+    
+                messages.innerHTML += "<p><b>Bot:</b> " + botMessage + "</p>";
+                document.getElementById("userInput").value = "";
+            }
+        </script>
+    </div>
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy;© 2025 Universal Eye. Money Master All rights reserved.
+    </p>
+</footer>
+</body>
+</html>
