@@ -72,7 +72,7 @@
       display: inline-block;
     }
     .profile-icon {
-      font-size: 36px; /* Increase icon size */
+      font-size: 36px;
       cursor: pointer;
     }
     .profile-menu-content {
@@ -114,43 +114,248 @@
       font-size: 20px;
       color: var(--whiteSmoke);
     }
+    @media screen and (max-width: 768px) {
+      .navbar .menu-btn i {
+        display: block;
+      }
+      .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+      }
+      #click:checked + .menu-btn + ul {
+        display: flex;
+      }
+      .navbar ul li a {
+        padding: 15px;
+        font-size: 18px;
+      }
+    }
   </style>
+
+  
+  
 </head>
 <body class="min-h-screen font-['Inter']">
     
-    <nav class="navbar">
-        <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <div class="logo">Money Master</div>
-                <input type="checkbox" name="" id="click">
-                <label for="click" class="menu-btn">
-                    <i class="material-icons">menu</i>
-                </label>
-                <ul>
-                    <li><a href="dashboard.html">Home</a></li>
-                    <li><a href="webtools.html">Web Tools</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Author</a></li>
-                </ul>
-                <div class="profile-menu">
-                    <i class="material-icons profile-icon">account_circle</i>
-                    <div class="profile-menu-content">
-                        <a href="#">Account</a>
-                        <a id="userEmail" href="#">Email: user@example.com</a>
-                        <a id="resetPassword" href="#">Reset Password</a>
-                        <a id="signOut" href="index.html">Sign Out</a>
-                    </div>
-                </div>
-            </div>
+  <nav class="navbar">
+    <div class="container">
+      <div class="flex justify-between items-center">
+        <div class="logo">Money Master</div>
+        <input type="checkbox" name="" id="click" class="hidden">
+        <label for="click" class="menu-btn">
+          <i class="material-icons">menu</i>
+        </label>
+        <ul class="hidden md:flex">
+          <li><a href="dashboard.html">Home</a></li>
+          <li><a href="webtools.html">Web Tools</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="Movies.html">Movies</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="profile-menu">
+          <i class="material-icons profile-icon">account_circle</i>
+          <div class="profile-menu-content">
+            <a href="#">Account</a>
+            <a id="userEmail" href="#">Email: user@example.com</a>
+            <a id="resetPassword" href="#">Reset Password</a>
+            <a id="signOut" href="index.html">Sign Out</a>
+          </div>
         </div>
-    </nav>
+      </div>
+    </div>
+  </nav>
   
-    <header>
-        <h1 class="heading">Welcome to Money Master Dashboard</h1>
-        <p class="content">Explore our web tools, learn more about us, or get in touch.</p>
-    </header>
- 
+
+  <script>
+    
+    // Disable Right-Click
+    document.addEventListener("contextmenu", (event) => event.preventDefault());
+  
+    // Disable Key Combinations for Viewing Source Code or Developer Tools
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.ctrlKey && 
+        ["u", "s", "i", "j", "h", "c"].includes(event.key.toLowerCase())
+      ) {
+        event.preventDefault();
+      }
+      if (event.key === "F12") {
+        event.preventDefault();
+      }
+    });
+  
+    // Disable Copy, Cut, and Paste
+    document.addEventListener("copy", (event) => event.preventDefault());
+    document.addEventListener("cut", (event) => event.preventDefault());
+    document.addEventListener("paste", (event) => event.preventDefault());
+  
+    // Disable Text Selection
+    document.addEventListener("selectstart", (event) => event.preventDefault());
+  
+    // Disable Dragging Elements
+    document.addEventListener("dragstart", (event) => event.preventDefault());
+  
+    // Disable Button Clicks
+    document.addEventListener("click", (event) => {
+      if (event.target.tagName === "BUTTON") {
+        event.preventDefault();
+      }
+    });
+  
+    // Hide Elements from Inspect Element (Anti-Debugging)
+    (function () {
+      function devToolsCheck() {
+        const before = new Date();
+        debugger;
+        const after = new Date();
+        if (after - before > 100) {
+          document.body.innerHTML = "<h1 style='text-align:center; color:red;'>Access Denied</h1>";
+        }
+      }
+      setInterval(devToolsCheck, 1000);
+    })();
+  </script>
+  
+  <h1 class="heading">Welcome to Money Master Dashboard</h1>
+  <p class="content">Explore our web tools, learn more about us, or get in touch.</p>
+</header>
+
+<section id="services" class="py-10 px-6 text-white text-center">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">Our <span class="text-yellow-400">Services</span></h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <div class="p-6 rounded-lg shadow-lg bg-opacity-70">
+        <h3 class="text-xl font-semibold mb-2">🎬 Movies & Entertainment</h3>
+        <p>Watch the latest Hindi, Sinhala, and English movies, all in one place.</p>
+      </div>
+
+      <div class="p-6 rounded-lg shadow-lg bg-opacity-70">
+        <h3 class="text-xl font-semibold mb-2">🛠️ Free Web Tools</h3>
+        <p>Use a collection of online tools for productivity, utilities, and more.</p>
+      </div>
+
+      <div class="p-6 rounded-lg shadow-lg bg-opacity-70">
+        <h3 class="text-xl font-semibold mb-2">📺 YouTube Hub</h3>
+        <p>Discover trending videos, tutorials, and exclusive content.</p>
+      </div>
+
+      <div class="p-6 rounded-lg shadow-lg bg-opacity-70">
+        <h3 class="text-xl font-semibold mb-2">🚀 Pro Features</h3>
+        <p>Upgrade to access premium content, faster streaming, and exclusive tools.</p>
+      </div>
+
+      <div class="p-6 rounded-lg shadow-lg bg-opacity-70">
+        <h3 class="text-xl font-semibold mb-2">🌐 Website Development</h3>
+        <p>Need a website? Let us create a professional site for you!</p>
+      </div>
+
+      <div class="p-6 rounded-lg shadow-lg bg-opacity-70">
+        <h3 class="text-xl font-semibold mb-2">💼 Custom Digital Services</h3>
+        <p>Looking for something unique? We offer tailored web solutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #services {
+    background: url('your-background-image.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .p-6 {
+    padding: 24px;
+    background: rgba(34, 34, 34, 0.7);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .p-6:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(255, 215, 0, 0.2);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #facc15;
+    margin-bottom: 10px;
+  }
+</style><section id="services" class="py-10 px-6 text-white text-center">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">Our <span class="text-yellow-400">Services</span></h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <div class="p-6 rounded-lg shadow-lg bg-opacity-70">
+        <h3 class="text-xl font-semibold mb-2">🎬 Movies & Entertainment</h3>
+        <p>Watch the latest Hindi, Sinhala, and English movies, all in one place.</p>
+      </div>
+
+      <div class="p-6 rounded-lg shadow-lg bg-opacity-70">
+        <h3 class="text-xl font-semibold mb-2">🛠️ Free Web Tools</h3>
+        <p>Use a collection of online tools for productivity, utilities, and more.</p>
+      </div>
+
+      <div class="p-6 rounded-lg shadow-lg bg-opacity-70">
+        <h3 class="text-xl font-semibold mb-2">📺 YouTube Hub</h3>
+        <p>Discover trending videos, tutorials, and exclusive content.</p>
+      </div>
+
+      <div class="p-6 rounded-lg shadow-lg bg-opacity-70">
+        <h3 class="text-xl font-semibold mb-2">🚀 Pro Features</h3>
+        <p>Upgrade to access premium content, faster streaming, and exclusive tools.</p>
+      </div>
+
+      <div class="p-6 rounded-lg shadow-lg bg-opacity-70">
+        <h3 class="text-xl font-semibold mb-2">🌐 Website Development</h3>
+        <p>Need a website? Let us create a professional site for you!</p>
+      </div>
+
+      <div class="p-6 rounded-lg shadow-lg bg-opacity-70">
+        <h3 class="text-xl font-semibold mb-2">💼 Custom Digital Services</h3>
+        <p>Looking for something unique? We offer tailored web solutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  #services {
+    background: url('your-background-image.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .p-6 {
+    padding: 24px;
+    background: rgba(34, 34, 34, 0.7);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .p-6:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(255, 215, 0, 0.2);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #facc15;
+    margin-bottom: 10px;
+  }
+</style>
+      </div>
+    </div>
+  </section>  
+  <header>
+
+  
   <!-- Include Firebase, Auth, and Chat Scripts -->
   <script type="module" src="config.js"></script>
   <script type="module" src="auth.js"></script>
