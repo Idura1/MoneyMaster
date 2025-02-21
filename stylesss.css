@@ -1,4 +1,24 @@
-/* styles.css */
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Default for PC */
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+}
 
 
 
