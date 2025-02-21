@@ -183,6 +183,54 @@ document.addEventListener("keydown", function(event) {
     <footer class="footer">
         <p>&copy; 2025 Universal Eye. Money Master All rights reserved.</p>
     </footer>
-
+    <script>
+        // Disable Right-Click
+        document.addEventListener("contextmenu", (event) => event.preventDefault());
+      
+        // Disable Key Combinations for Viewing Source Code or Developer Tools
+        document.addEventListener("keydown", (event) => {
+          if (
+            event.ctrlKey && 
+            ["u", "s", "i", "j", "h", "c"].includes(event.key.toLowerCase())
+          ) {
+            event.preventDefault();
+          }
+          if (event.key === "F12") {
+            event.preventDefault();
+          }
+        });
+      
+        // Disable Copy, Cut, and Paste
+        document.addEventListener("copy", (event) => event.preventDefault());
+        document.addEventListener("cut", (event) => event.preventDefault());
+        document.addEventListener("paste", (event) => event.preventDefault());
+      
+        // Disable Text Selection
+        document.addEventListener("selectstart", (event) => event.preventDefault());
+      
+        // Disable Dragging Elements
+        document.addEventListener("dragstart", (event) => event.preventDefault());
+      
+        // Disable Button Clicks
+        document.addEventListener("click", (event) => {
+          if (event.target.tagName === "BUTTON") {
+            event.preventDefault();
+          }
+        });
+      
+        // Hide Elements from Inspect Element (Anti-Debugging)
+        (function () {
+          function devToolsCheck() {
+            const before = new Date();
+            debugger;
+            const after = new Date();
+            if (after - before > 100) {
+              document.body.innerHTML = "<h1 style='text-align:center; color:red;'>Access Denied</h1>";
+            }
+          }
+          setInterval(devToolsCheck, 1000);
+        })();
+      </script>
+      
 </body>
 </html>
