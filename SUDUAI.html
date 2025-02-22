@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudu AI - ආදරයෙන් කතා කරන Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+  <div id="welcome-message">
+    <h2>ආයුබෝවන්! ඔබව සාදරයෙන් පිළිගනිමු! 😊</h2>
+    <p>ඔබගේ ගමන අප සමඟ අරඹන්න!</p>
+    <button onclick="closeWelcomeMessage()">Close</button>
+  </div>
+  
+<body>
+  <div class="chat-container">
+    <div class="chat-box" id="chatBox"></div>
+    <input type="text" id="userInput" placeholder="ඔබේ පණිවිඩය ටයිප් කරන්න..." />
+    <button onclick="sendMessage()">කතා කරන්න</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
