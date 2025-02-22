@@ -1,0 +1,183 @@
+/* Body and general layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Dark background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #f0f0f0; /* Light text for better visibility */
+  }
+  
+  .chat-container {
+    background-color: #1e1e1e; /* Darker background for chat container */
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+  }
+  
+  .chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #333; /* Dark background for messages */
+    border-radius: 10px;
+    border: 1px solid #444;
+    height: 80%;
+    font-size: 16px;
+  }
+  
+  input {
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #444;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background-color: #222; /* Dark input field */
+    color: #f0f0f0; /* Light text inside input */
+    transition: all 0.2s ease;
+  }
+  
+  input:focus {
+    border-color: #FF69B4; /* Highlight color when focused */
+    outline: none;
+  }
+  
+  button {
+    padding: 12px;
+    background-color: #FF69B4; /* Pink button */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #FF1493; /* Darker pink on hover */
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Chat message styles */
+  .chat-box p {
+    margin: 10px 0;
+  }
+  
+  .chat-box b {
+    color: #FF69B4; /* Pink color for name */
+    font-weight: bold;
+  }
+  
+  /* User messages */
+  .chat-box .user-message {
+    background-color: #FF69B4; /* Soft pink user message bubble */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 70%;
+    margin-left: auto;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 16px;
+  }
+  
+  .chat-box .user-message::after {
+    content: "😊";
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+  }
+  
+  /* Bot messages */
+  .chat-box .bot-message {
+    background-color: #444; /* Dark bot message bubble */
+    color: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 70%;
+    margin-right: auto;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .chat-box .bot-message::after {
+    content: "💖";
+    font-size: 20px;
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  #welcome-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  #welcome-message h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  #welcome-message p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #welcome-message button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #welcome-message button:hover {
+    background-color: #218838;
+  }
+  
+
+
+
+
+
+
+
