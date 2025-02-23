@@ -74,81 +74,43 @@ function closeWelcomeMessage() {
             return "मेरे पास कोई भौतिक स्थान नहीं है!";
         }
     }
-
-    // More responses
-    if (input.includes("පාලුව මකා ගන්න කරන්න පුලුවන්  දෙවල් මොනවද ? ") || input.includes("Can you help me?") || input.includes("क्या आप मेरी मदद कर सकते हैं?")) {
-        if (input.includes("ඔබට සහය දීමට හැකිද?") || input.includes("Can you help me?")) {
-            return "පාලුව මකාගන්න පුළුවන් ක්‍රම ගොඩක් තියෙනවා. ඔයාට කැමති, හිතට ගැලපෙන එකක් හොයලා බලන්න.
-
-මානසික පාලුවට:
-
-1. නව දේවල් ඉගෙන ගන්න – නව භාෂාවක්, විශේෂ දැනුමක් හෝ හැකියාවක් ඉගෙන ගන්න.
-
-
-2. පාඩම් කරන්න / වැඩි දැනුමක් ලබා ගන්න – ගිහිගෙදර හෝ වෘත්තියට අදාල නව දෙයක් හොයාගෙන ඉගෙන ගන්න.
-
-
-3. බලන්න, අහන්න, කියවන්න – චිත්‍රපට, නාට්‍ය, පොත්, පොඩි කතා (short stories), podcast අහන්න.
-
-
-4. සන්සුන් වෙන්න – ජීවිතේ ගැන හිතන්න, journaling කරන්න, ස්වයං ප්‍රතිපල ගැන හෝ අදහස් ලියන්න.
-
-
-5. නව මිතුරන් හෝ සබඳතා ගොඩනගන්න – Discord, Telegram, Facebook වගේ තැන්වලින් ලෝකයේ වෙනත් මිනිස්සුන් එක්ක සම්බන්ධ වෙන්න.
-
-
-
-භෞතික පාලුවට:
-
-1. ගොඩක් කාර්යබහුල වෙන්න – වැඩ කරන එක, project එකක් කරලා බැලීම, නැත්තං යමක් code කිරීම.
-
-
-2. ක්‍රීඩා කිරීම / ව්‍යායාමය කිරීම – Gym එකට යන එක, දුවන එක, හෝ නව ක්‍රීඩාවක් උත්සාහ කිරීම.
-
-
-3. සන්සුන් තැනකට යන එක – නිදහස් අවකාශයකට ගිහින් යමක් වෙනස් කරලා බලන්න.
-
-
-4. ගෘහස්ථ වැඩ කිරීම – හීන කුටියක් සැලසුම් කිරීම, නව දෙයක් නිර්මාණය කිරීම, ඇඳුම් සැලසුම් කිරීම වගේ දේවල්.
-
-
-
-තවද, ආදරණීය මිනිස්සුන් සමඟ කාලය ගත කරන්න – පවුලේ අයට, යහළුවන්ට, සහ ආදරය කරන කෙනෙකුට කාලය යොදන්න.
-
-ඔයාට වඩාත් ගැලපෙන, සතුටු කරන දේවල් කරන්න.
-
- / Yes, I can help you!";
-        }
-        if (input.includes("क्या आप मेरी मदद कर सकते हैं?")) {
-            return "हाँ, मैं आपकी मदद कर सकता हूँ!";
-        }
+// More responses
+if (input.includes("පාලුව මකා ගන්න කරන්න පුලුවන්  දෙවල් මොනවද ? ") || input.includes("Can you help me?") || input.includes("क्या आप मेरी मदद कर सकते हैं?")) {
+    if (input.includes("ඔබට සහය දීමට හැකිද?") || input.includes("Can you help me?")) {
+        return "පාලුව මකාගන්න පුලුවන් ක්‍රම ගොඩක් තියෙනවා. ඔයාට කැමති, හිතට ගැලපෙන එකක් හොයලා බලන්න.\n\nමානසික පාලුවට:\n\n1. නව දේවල් ඉගෙන ගන්න – නව භාෂාවක්, විශේෂ දැනුමක් හෝ හැකියාවක් ඉගෙන ගන්න.\n\n2. පාඩම් කරන්න / වැඩි දැනුමක් ලබා ගන්න – ගිහිගෙදර හෝ වෘත්තියට අදාල නව දෙයක් හොයාගෙන ඉගෙන ගන්න.\n\n3. බලන්න, අහන්න, කියවන්න – චිත්‍රපට, නාට්‍ය, පොත්, පොඩි කතා (short stories), podcast අහන්න.\n\n4. සන්සුන් වෙන්න – ජීවිතේ ගැන හිතන්න, journaling කරන්න, ස්වයං ප්‍රතිපල ගැන හෝ අදහස් ලියන්න.\n\n5. නව මිතුරන් හෝ සබඳතා ගොඩනගන්න – Discord, Telegram, Facebook වගේ තැන්වලින් ලෝකයේ වෙනත් මිනිස්සුන් එක්ක සම්බන්ධ වෙන්න.\n\nභෞතික පාලුවට:\n\n1. ගොඩක් කාර්යබහුල වෙන්න – වැඩ කරන එක, project එකක් කරලා බැලීම, නැත්තං යමක් code කිරීම.\n\n2. ක්‍රීඩා කිරීම / ව්‍යායාමය කිරීම – Gym එකට යන එක, දුවන එක, හෝ නව ක්‍රීඩාවක් උත්සාහ කිරීම.\n\n3. සන්සුන් තැනකට යන එක – නිදහස් අවකාශයකට ගිහින් යමක් වෙනස් කරලා බලන්න.\n\n4. ගෘහස්ථ වැඩ කිරීම – හීන කුටියක් සැලසුම් කිරීම, නව දෙයක් නිර්මාණය කිරීම, ඇඳුම් සැලසුම් කිරීම වගේ දේවල්.\n\nතවද, ආදරණීය මිනිස්සුන් සමඟ කාලය ගත කරන්න – පවුලේ අයට, යහළුවන්ට, සහ ආදරය කරන කෙනෙකුට කාලය යොදන්න.\n\nඔයාට වඩාත් ගැලපෙන, සතුටු කරන දේවල් කරන්න.\n\n/ Yes, I can help you!";
     }
-
-    if (input.includes("ඔබ ඉගෙන ගන්නවා?") || input.includes("Do you learn?") || input.includes("क्या आप सीखते हैं?")) {
-        if (input.includes("ඔබ ඉගෙන ගන්නවා?") || input.includes("Do you learn?")) {
-            return "ඔව්, මට නිතරම ඉගෙන ගන්න පුළුවන්! / Yes, I can always learn!";
-        }
-        if (input.includes("क्या आप सीखते हैं?")) {
-            return "हाँ, मैं हमेशा सीखता और सुधारता हूँ!";
-        }
+    if (input.includes("क्या आप मेरी मदद कर सकते हैं?")) {
+        return "हाँ, मैं आपकी मदद कर सकता हूँ!";
     }
+}
 
-    if (input.includes("ඔබට කුමක් ද?") || input.includes("What is your purpose?") || input.includes("आपका उद्देश्य क्या है?")) {
-        if (input.includes("ඔබට කුමක් ද?") || input.includes("What is your purpose?")) {
-            return "මට ඔබේ ප්‍රශ්න වලට උත්තර දෙන්නයි! / My purpose is to answer your questions!";
-        }
-        if (input.includes("आपका उद्देश्य क्या है?")) {
-            return "मेरा उद्देश्य आपके सवालों का जवाब देना है!";
-        }
+if (input.includes("ඔබ ඉගෙන ගන්නවා?") || input.includes("Do you learn?") || input.includes("क्या आप सीखते हैं?")) {
+    if (input.includes("ඔබ ඉගෙන ගන්නවා?") || input.includes("Do you learn?")) {
+        return "ඔව්, මට නිතරම ඉගෙන ගන්න පුළුවන්! / Yes, I can always learn!";
     }
+    if (input.includes("क्या आप सीखते हैं?")) {
+        return "हाँ, मैं हमेशा सीखता और सुधारता हूँ!";
+    }
+}
 
-    if (input.includes("ඔබ කුමන භාෂාවන් දන්නේ?") || input.includes("What languages do you know?") || input.includes("आप कौन सी भाषाएँ जानते हैं?")) {
-        if (input.includes("ඔබ කුමන භාෂාවන් දන්නේ?") || input.includes("What languages do you know?")) {
-            return "මට සිංහල, ඉංග්‍රීසි සහ හින්දි භාෂා දැනෙයි! / I know Sinhala, English, and Hindi!";
-        }
-        if (input.includes("आप कौन सी भाषाएँ जानते हैं?")) {
-            return "मैं हिंदी, अंग्रेजी और सिंहला बोल सकता हूँ!";
-        }
+if (input.includes("ඔබට කුමක් ද?") || input.includes("What is your purpose?") || input.includes("आपका उद्देश्य क्या है?")) {
+    if (input.includes("ඔබට කුමක් ද?") || input.includes("What is your purpose?")) {
+        return "මට ඔබේ ප්‍රශ්න වලට උත්තර දෙන්නයි! / My purpose is to answer your questions!";
+    }
+    if (input.includes("आपका उद्देश्य क्या है?")) {
+        return "मेरा उद्देश्य आपके सवालों का जवाब देना है!";
+    }
+}
+
+if (input.includes("ඔබ කුමන භාෂාවන් දන්නේ?") || input.includes("What languages do you know?") || input.includes("आप कौन सी भाषाएँ जानते हैं?")) {
+    if (input.includes("ඔබ කුමන භාෂාවන් දන්නේ?") || input.includes("What languages do you know?")) {
+        return "මට සිංහල, ඉංග්‍රීසි සහ හින්දි භාෂා දැනෙයි! / I know Sinhala, English, and Hindi!";
+    }
+    if (input.includes("आप कौन सी भाषाएँ जानते हैं?")) {
+        return "मैं हिंदी, अंग्रेजी और सिंहला बोल सकता हूँ!";
+    }
+}
+
     }
 
     // Additional Questions and Responses
@@ -188,5 +150,3 @@ function closeWelcomeMessage() {
         }
     }
 
-    return "Sorry, I didn't understand that. Could you please ask in Sinhala, English, or Hindi?";
-}
