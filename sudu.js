@@ -31,12 +31,12 @@ function closeWelcomeMessage() {
 
   function generateResponse(input) {
     // Sinhala Responses
-    if (input.includes("හායි") || input.includes("Hi") || input.includes("ඔබේ නම") || input.includes("What is your name?") || input.includes("ඔබට කුමක් ද?") || input.includes("What can you do?")) {
+    if (input.includes("හායි") || input.includes("Hi") || input.includes("ඔයාගේ නම මොකද්ද?") || input.includes("What is your name?") || input.includes("ඔබට කුමක් ද?") || input.includes("What can you do?")) {
         if (input.includes("හායි") || input.includes("Hi")) {
             return "ඔබට කුමක් ද? දැනගන්න ඔන ☺️💖 මම AI සුදු!!";
         }
-        if (input.includes("ඔබේ නම") || input.includes("What is your name?")) {
-            return "මගේ නම AI සුදුයි! / My name is AI Sudu!";
+        if (input.includes("ඔයාව හැදුවේ කව්ද") || input.includes("What is your name?")) {
+            return "මාව හැදුවේ W.M.IDURA BUDDIKA AI සුදු!/ My name is AI Sudu!";
         }
         if (input.includes("ඔබට කුමක් ද?") || input.includes("What can you do?")) {
             return "මට ඔබේ ප්‍රශ්න වලට උත්තර දෙන්න පුළුවන්! / I can answer your questions!";
